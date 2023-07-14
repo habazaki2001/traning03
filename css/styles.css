@@ -689,7 +689,7 @@ main {
 
 .btn.white a {
   color: var(--mcolor);
-  background-color: #fff;
+  background: #fff;
   border: 1px solid var(--mcolor);
   border-radius: 25px;
   width: 250px;
