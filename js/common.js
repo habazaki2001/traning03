@@ -47,10 +47,12 @@ $(window).bind('load', function() {
 
 $(window).bind('load scroll', function() {
     "use strict";
-    if ($(this).scrollTop() >= 500) {
+    if ($(this).scrollTop() >= 300) {
         $('.to_top,.sp_contact').addClass('show');
+        $('.h_box').addClass('h_scroll')
     } else {
         $('.to_top,.sp_contact').removeClass('show');
+        $('.h_box').removeClass('h_scroll')
     }
 });
 
@@ -64,9 +66,12 @@ $(document).ready(function() {
         $("nav").fadeToggle(100);
         if($(this).hasClass("is_active")){
             $("body").css("overflow","hidden")
+            $('.to_top,.sp_contact').removeClass('show');
         }
         else {
             $("body").css("overflow-y","scroll")
+        $('.to_top,.sp_contact').addClass('show');
+
         }
     });
 
@@ -89,6 +94,7 @@ $(document).ready(function() {
             slidesToShow: 1,
             slidesToScroll: 1,
             arrows: true,
+            appendArrows:".sec06 .slick-list"
         });
     }
     // back to top
